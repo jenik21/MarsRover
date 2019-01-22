@@ -11,6 +11,7 @@ namespace MarsRover
         int grootteX = 40;
         int grootteY = 20;
 
+        //Maakt een omgeving waarin je kan bewegen (in de console)
         public void toonMars()
         {
             Console.ForegroundColor = ConsoleColor.White;
