@@ -8,8 +8,8 @@ namespace MarsRover
 {
     class Mars
     {
-        int grootteX = 40;
-        int grootteY = 20;
+        int grootteX = 40; //Hoogte
+        int grootteY = 20; //Breedte
 
         //Maakt een omgeving waarin je kan bewegen (in de console)
         public void toonMars()
