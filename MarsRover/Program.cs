@@ -6,42 +6,102 @@ using System.Threading.Tasks;
 
 namespace MarsRover
 {
-    class Mars
+    public class Program
     {
-        int grootteX = 40;
-        int grootteY = 20;
-
-        //Maakt een omgeving waarin je kan bewegen (in de console)
-        public void toonMars()
+        public static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.SetCursorPosition(0, 0);
-            Console.Write("╔");
-            for (int i = 1; i < grootteX; i++)
+            Console.BackgroundColor = ConsoleColor.DarkRed; // mars :-)
+            Console.Clear();
+            Console.CursorVisible = false; // cursor weg
+
+            Mars mars = new Mars();
+            InSight rover = new InSight();
+            rover.ToonInSight();
+            mars.toonMars();
+
+            while (true)
             {
-                Console.SetCursorPosition(i, 0);
-                Console.Write("═");
-            }
-            Console.Write("╗");
-            for (int i = 1; i < grootteY; i++)
-            {
-                Console.SetCursorPosition(0, i);
-                Console.Write("║");
-            }
-            Console.SetCursorPosition(0, grootteY);
-            Console.Write("╚");
-            for (int i = 1; i < grootteY; i++)
-            {
-                Console.SetCursorPosition(grootteX, i);
-                Console.Write("║");
-            }
-            Console.SetCursorPosition(grootteX, grootteY);
-            Console.Write("╝");
-            for (int i = 1; i < grootteX; i++)
-            {
-                Console.SetCursorPosition(i, grootteY);
-                Console.Write("═");
+                if (Console.KeyAvailable)
+                {
+                    var command = Console.ReadKey().Key;
+
+                    switch (command)
+                    {
+                        case ConsoleKey.DownArrow:
+                            rover.moveDown();
+                            break;
+                        case ConsoleKey.UpArrow:
+                            rover.moveUp();
+                            break;
+                        case ConsoleKey.LeftArrow:
+                            rover.moveLeft();
+                            break;
+                        case ConsoleKey.RightArrow:
+                            rover.moveRight();
+                            break;
+                    }
+                    Console.Clear();
+                    rover.ToonInSight();
+                    mars.toonMars();
+
+                }
             }
         }
+    }
+
+    class InSight
+    {
+        char symbool = '#';
+        ConsoleColor kleur = ConsoleColor.Yellow;
+        int posX = 1;
+        int posY = 1;
+
+        public InSight()
+        {
+
+        }
+
+        public InSight(char symbool, ConsoleColor kleur)
+        {
+            this.symbool = symbool;
+            this.kleur = kleur;
+        }
+
+        public void moveUp()
+        {
+            if (posY > 0)
+            {
+                posY--;
+            }
+        }
+
+        public void moveDown()
+        {
+            posY++;
+        }
+
+        public void moveLeft()
+        {
+            if (posX > 0)
+            {
+                posX--;
+            }
+        }
+
+        public void moveRight()
+        {
+            posX++;
+        }
+
+        public void ToonInSight()
+        {
+            if (posX >= 0 && posY >= 0)
+            {
+                Console.ForegroundColor = kleur;
+                Console.SetCursorPosition(posX, posY);
+                Console.Write(symbool);
+            }
+        }
+
     }
 }
