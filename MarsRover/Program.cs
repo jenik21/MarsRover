@@ -80,7 +80,7 @@ namespace MarsRover
             posY++;
         }
 
-        public void moveLeft()
+        public void moveLeft() //paddenstoel
         {
             if (posX > 0)
             {
@@ -95,7 +95,7 @@ namespace MarsRover
 
         public void ToonInSight()
         {
-            if (posX >= 0 && posY >= 0)
+            if (posX >= 0 && posY >= 0) 
             {
                 Console.ForegroundColor = kleur;
                 Console.SetCursorPosition(posX, posY);
