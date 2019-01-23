@@ -8,6 +8,7 @@ namespace MarsRover
 {
     public class Program
     {
+ 
         public static void Main(string[] args)
         {
             Console.BackgroundColor = ConsoleColor.DarkRed; // mars :-)
@@ -55,10 +56,13 @@ namespace MarsRover
         ConsoleColor kleur = ConsoleColor.Yellow;
         int posX = 1;
         int posY = 1;
+        Energie F;
+        //verbreuk per verplaatsing
+        public int vpv = 1;
 
         public InSight()
         {
-
+             F = new Energie();
         }
 
         public InSight(char symbool, ConsoleColor kleur)
@@ -72,12 +76,14 @@ namespace MarsRover
             if (posY > 0)
             {
                 posY--;
+                F.verbruik(vpv);
             }
         }
 
         public void moveDown()
         {
             posY++;
+            F.verbruik(vpv);
         }
 
         public void moveLeft()
@@ -85,12 +91,14 @@ namespace MarsRover
             if (posX > 0)
             {
                 posX--;
+                F.verbruik(vpv);
             }
         }
 
         public void moveRight()
         {
             posX++;
+            F.verbruik(vpv);
         }
 
         public void ToonInSight()
@@ -103,5 +111,21 @@ namespace MarsRover
             }
         }
 
+    }
+    class Energie
+    {
+        private int fuel = 50;
+        public int verbruik(int F) {
+            fuel = fuel - F;
+            return fuel;
+        }
+        public int huidigverbruik(int groote)
+        {
+            return fuel;
+        }
+        public void opladen()
+        {
+            fuel = 50;
+        }
     }
 }
