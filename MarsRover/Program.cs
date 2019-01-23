@@ -54,9 +54,11 @@ namespace MarsRover
             }
         }
     }
+   
 
     class InSight
     {
+        //hey kids
         char symbool = '#';
         ConsoleColor kleur = ConsoleColor.Yellow;
         int posX = 1;
@@ -106,6 +108,25 @@ namespace MarsRover
                 Console.ForegroundColor = kleur;
                 Console.SetCursorPosition(posX, posY);
                 Console.Write(symbool);
+            }
+        }
+        //boren
+        bool succes = false;
+        char waterplas = '〰';
+        ConsoleColor water = ConsoleColor.Blue;
+        int waterX;
+        int waterY;
+        public void boor()
+        {
+            //wachtend op noah
+        }
+        public void toonwater(bool succes)
+        {
+            if (succes == true)
+            {
+                Console.SetCursorPosition(waterX, waterY);
+                Console.ForegroundColor = water;
+                Console.Write(waterplas);
             }
         }
 
