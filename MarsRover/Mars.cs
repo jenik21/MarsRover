@@ -8,7 +8,7 @@ namespace MarsRover
 {
     class Mars
     {
-        int grootteX = 40;
+        int grootteX = 40; //jochen is kut
         int grootteY = 20;
 
         //Maakt een omgeving waarin je kan bewegen (in de console)
