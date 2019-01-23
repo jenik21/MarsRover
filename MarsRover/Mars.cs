@@ -22,12 +22,14 @@ namespace MarsRover
                 Console.SetCursorPosition(i, 0);
                 Console.Write("═");
             }
+            //hello me old chum
             Console.Write("╗");
             for (int i = 1; i < grootteY; i++)
             {
                 Console.SetCursorPosition(0, i);
                 Console.Write("║");
             }
+            //im gnot a gnelf
             Console.SetCursorPosition(0, grootteY);
             Console.Write("╚");
             for (int i = 1; i < grootteY; i++)
@@ -35,6 +37,7 @@ namespace MarsRover
                 Console.SetCursorPosition(grootteX, i);
                 Console.Write("║");
             }
+            //im gnot a gnoblin
             Console.SetCursorPosition(grootteX, grootteY);
             Console.Write("╝");
             for (int i = 1; i < grootteX; i++)
@@ -43,5 +46,7 @@ namespace MarsRover
                 Console.Write("═");
             }
         }
+        //but im a gnome
     }
 }
+// AND YOUVE BEEN GNOMED
