@@ -27,7 +27,7 @@ namespace MarsRover
 
                     switch (command)
                     {
-                        case ConsoleKey.DownArrow:
+                        case ConsoleKey.DownArrow: //naar benedenbewegen
                             rover.moveDown();
                             break;
                         case ConsoleKey.UpArrow:
