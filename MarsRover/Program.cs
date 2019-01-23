@@ -10,12 +10,16 @@ namespace MarsRover
     {
         public static void Main(string[] args)
         {
+
             Console.BackgroundColor = ConsoleColor.DarkRed; // mars :-)
             Console.Clear();
             Console.CursorVisible = false; // cursor weg
 
             Mars mars = new Mars();
             InSight rover = new InSight();
+            GenerateWater Water = new GenerateWater();
+            int[] CoWaX = Water.GenerateX();
+            int[] CoWaY = Water.GenerateY();
             rover.ToonInSight();
             mars.toonMars();
 
