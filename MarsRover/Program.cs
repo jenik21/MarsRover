@@ -94,6 +94,7 @@ namespace MarsRover
         {
             posX++;
         }
+        
 
         public void ToonInSight()
         {
