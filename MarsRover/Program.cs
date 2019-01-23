@@ -11,14 +11,20 @@ namespace MarsRover
  
         public static void Main(string[] args)
         {
+
             Console.BackgroundColor = ConsoleColor.DarkRed; // mars :-)
             Console.Clear();
             Console.CursorVisible = false; // cursor weg
 
             Mars mars = new Mars();
+            Basisstation station = new Basisstation();
             InSight rover = new InSight();
+            GenerateWater Water = new GenerateWater();
+            int[] CoWaX = Water.GenerateX();
+            int[] CoWaY = Water.GenerateY();
             rover.ToonInSight();
             mars.toonMars();
+            station.toonBasis();
 
             while (true)
             {
@@ -28,7 +34,7 @@ namespace MarsRover
 
                     switch (command)
                     {
-                        case ConsoleKey.DownArrow:
+                        case ConsoleKey.DownArrow: //naar benedenbewegen
                             rover.moveDown();
                             break;
                         case ConsoleKey.UpArrow:
@@ -44,7 +50,7 @@ namespace MarsRover
                     Console.Clear();
                     rover.ToonInSight();
                     mars.toonMars();
-
+                    station.toonBasis();
                 }
             }
         }
@@ -103,7 +109,7 @@ namespace MarsRover
 
         public void ToonInSight()
         {
-            if (posX >= 0 && posY >= 0)
+            if (posX >= 0 && posY >= 0) 
             {
                 Console.ForegroundColor = kleur;
                 Console.SetCursorPosition(posX, posY);
@@ -112,6 +118,7 @@ namespace MarsRover
         }
 
     }
+
     class Energie
     {
         private int fuel = 50;
@@ -128,4 +135,34 @@ namespace MarsRover
             fuel = 50;
         }
     }
+
+    class Basisstation
+    {
+        char symbool = '▀';
+        ConsoleColor basis = ConsoleColor.Green;
+        int posX = 5;
+        int posY = 3;
+
+        public void toonBasis()
+        {
+            Console.SetCursorPosition(posX, posY);
+            Console.Write(symbool);
+        }
+
+
+        private void Laadstation()
+        {
+            if (posX == 50 && posY == 30)
+            {
+                Opladen();
+            }
+        }
+
+        private void Opladen()
+        {
+            //energie = energie++;
+        }
+
+}
+
 }

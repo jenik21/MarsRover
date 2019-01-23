@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace MarsRover
     {
         int grootteX = 40;
         int grootteY = 20;
+
+
 
         //Maakt een omgeving waarin je kan bewegen (in de console)
         public void toonMars()
@@ -46,7 +49,37 @@ namespace MarsRover
                 Console.Write("═");
             }
         }
-        //but im a gnome
+
+
+        }
+    class GenerateWater
+    {
+        int[] CoX = new int[10];
+        int[] CoY = new int[10];
+        int X;
+        int Y;
+        Random Generate = new Random();
+
+        public int[] GenerateX()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                X = Generate.Next(0, 40);
+                CoX[i] = X;
+
+            }
+            return CoX;
+        }
+        public int[] GenerateY()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Y = Generate.Next(0, 20);
+                CoY[i] = Y;
+
+            }
+            return CoY;
+        }
     }
 }
 // AND YOUVE BEEN GNOMED
