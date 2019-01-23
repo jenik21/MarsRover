@@ -10,6 +10,79 @@ namespace MarsRover
     {
         public static void Main(string[] args)
         {
+            /*[Intro]
+We're rolling "Suicide"
+
+[Verse: Serj Tankian]
+Wake up (Wake up)
+Grab a brush and put a little makeup
+Hide your scars to fade away the shakeup
+(Hide the scars to fade away the)
+Why'd you leave the keys upon the table?
+Here you go, create another fable
+You wanted to!
+Grab a brush and put a little makeup
+You wanted to!
+Hide the scars to fade away the shakeup
+You wanted to!
+Why'd you leave the keys upon the table?
+You wanted to!
+
+[Chorus: Serj Tankian]
+I don't think you trust
+In my
+Self-righteous suicide
+I cry
+When angels deserve to
+DIE!
+
+[Verse: Serj Tankian]
+Wake up (Wake up)
+Grab a brush and put a little makeup
+Hide the scars to fade away the
+(Hide the scars to fade away the shakeup)
+Why'd you leave the keys upon the table?
+Here you go, create another fable
+You wanted to!
+Grab a brush and put a little makeup
+You wanted to!
+Hide the scars to fade away the shakeup
+You wanted to!
+Why'd you leave the keys upon the table?
+You wanted to!
+
+[Chorus: Serj Tankian]
+I don't think you trust
+In my
+Self-righteous suicide
+I cry
+When angels deserve to die
+In my
+Self-righteous suicide
+I cry
+When angels deserve to die...
+
+[Bridge: Serj Tankian (& Daron Malakian)]
+Father! (Father!) Father! (Father!)
+Father! (Father!) Father! (Father!)
+Father, into your hands I commend my spirit
+Father, into your hands
+Why have you forsaken me?
+In your eyes, forsaken me?
+In your thoughts, forsaken me?
+In your heart, forsaken me?
+
+[Chorus/Outro: Serj Tankian]
+Oh, trust in my
+Self-righteous suicide
+I cry
+When angels deserve to die
+In my
+Self-righteous suicide
+I cry
+When angels deserve to die
+    **/
+
             Console.BackgroundColor = ConsoleColor.DarkRed; // mars :-)
             Console.Clear();
             Console.CursorVisible = false; // cursor weg
