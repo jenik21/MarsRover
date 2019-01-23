@@ -51,6 +51,7 @@ namespace MarsRover
 
     class InSight
     {
+        //hey kids
         char symbool = '#';
         ConsoleColor kleur = ConsoleColor.Yellow;
         int posX = 1;
