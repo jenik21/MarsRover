@@ -13,11 +13,14 @@ namespace MarsRover
             Console.BackgroundColor = ConsoleColor.DarkRed; // mars :-)
             Console.Clear();
             Console.CursorVisible = false; // cursor weg
+            //Barier grens = new Barier();
 
             Mars mars = new Mars();
             InSight rover = new InSight();
             rover.ToonInSight();
             mars.toonMars();
+            //grens.test(rover);
+
 
             while (true)
             {
@@ -53,8 +56,9 @@ namespace MarsRover
     {
         char symbool = '#';
         ConsoleColor kleur = ConsoleColor.Yellow;
-        int posX = 1;
-        int posY = 1;
+        public int posX = 1;
+        public int posY = 1;
+
 
         public InSight()
         {
@@ -69,7 +73,7 @@ namespace MarsRover
 
         public void moveUp()
         {
-            if (posY > 0)
+            if (posY > 1)
             {
                 posY--;
             }
@@ -77,20 +81,31 @@ namespace MarsRover
 
         public void moveDown()
         {
-            posY++;
+            if (posY < 19)
+            {
+                posY++;
+            }
+            
         }
 
         public void moveLeft()
         {
-            if (posX > 0)
+
+            if (posX > 1)
             {
                 posX--;
             }
+       
+     
         }
 
         public void moveRight()
         {
-            posX++;
+            if (posX < 39)
+            {
+                posX++;
+            }
+               
         }
 
         public void ToonInSight()
@@ -101,7 +116,9 @@ namespace MarsRover
                 Console.SetCursorPosition(posX, posY);
                 Console.Write(symbool);
             }
-        }
 
+        }
     }
 }
+
+
