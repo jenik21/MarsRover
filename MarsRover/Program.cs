@@ -79,7 +79,7 @@ namespace MarsRover
 
         public void moveUp()
         {
-            if (posY > 0)
+            if (posY > 0 && F.huidigverbruik() > 0)
             {
                 posY--;
                 F.verbruik(vpv);
@@ -88,13 +88,16 @@ namespace MarsRover
 
         public void moveDown()
         {
+            if (F.huidigverbruik() > 0)
+            {
             posY++;
             F.verbruik(vpv);
+                }
         }
 
         public void moveLeft()
         {
-            if (posX > 0)
+            if (posX > 0 && F.huidigverbruik() > 0)
             {
                 posX--;
                 F.verbruik(vpv);
@@ -103,8 +106,11 @@ namespace MarsRover
 
         public void moveRight()
         {
+            if (F.huidigverbruik() > 0)
+            {
             posX++;
             F.verbruik(vpv);
+                }
         }
 
         public void ToonInSight()
