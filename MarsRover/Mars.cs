@@ -74,12 +74,42 @@ namespace MarsRover
             {
                 for (int j = 1; j < Ymax-1; j++)
                 {
-                    kans = Generate.Next(0, 11);
+                    kans = Generate.Next(0, 10);
                     if(kans == 1)
                     {
                         waterplaatsen[i, j] = true;
                     }
                     else { waterplaatsen[i, j] = false; }
+                }
+            }
+        }
+        public void WaterZien()
+        {
+            for (int i = 1; i < Xmax - 1; i++)
+            {
+                for (int j = 1; j < Ymax - 1; j++)
+                {
+                    if (waterplaatsen[i,j] == true)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.SetCursorPosition(i, j);
+                        Console.Write("%");
+                    }
+
+                }
+            }
+        }
+        public void WaterNietZien()
+        {
+            for (int i = 1; i < Xmax - 1; i++)
+            {
+                for (int j = 1; j < Ymax - 1; j++)
+                {
+                    if (waterplaatsen[i, j] == true)
+                    {
+                        Console.Write(" ");
+                    }
+
                 }
             }
         }
