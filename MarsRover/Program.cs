@@ -45,6 +45,9 @@ namespace MarsRover
                         case ConsoleKey.RightArrow:
                             rover.moveRight();
                             break;
+                        case ConsoleKey.Enter:
+                            rover.boor();
+                            break;
                     }
                     Console.Clear();
                     rover.ToonInSight();
@@ -107,6 +110,7 @@ namespace MarsRover
             posX++;
             F.verbruik(vpv);
         }
+        
 
         public void ToonInSight()
         {
@@ -120,20 +124,26 @@ namespace MarsRover
         //boren
         bool succes = false;
         char waterplas = '〰';
+        
         ConsoleColor water = ConsoleColor.Blue;
-        int waterX;
-        int waterY;
         public void boor()
         {
-            //wachtend op noah
+            for (int i =0; i < .length; i++)
+            {
+
+            }
         }
         public void toonwater(bool succes)
         {
             if (succes == true)
             {
-                Console.SetCursorPosition(waterX, waterY);
+                Console.SetCursorPosition(posX, posY);
                 Console.ForegroundColor = water;
                 Console.Write(waterplas);
+            }
+            else
+            {
+
             }
         }
 
