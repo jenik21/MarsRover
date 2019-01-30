@@ -151,10 +151,10 @@ namespace MarsRover
         ConsoleColor water = ConsoleColor.Blue;
         public void boor()
         {
-            for (int i =0; i < .length; i++)
-            {
+            //for (int i =0; i < .length; i++)
+            //{
 
-            }
+            //}
         }
         public void toonwater(bool succes)
         {
@@ -179,7 +179,7 @@ namespace MarsRover
             fuel = fuel - F;
             return fuel;
         }
-        public int huidigverbruik(int groote)
+        public int huidigverbruik()
         {
             return fuel;
         }
