@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace MarsRover
 {
@@ -74,13 +75,13 @@ namespace MarsRover
         public void RotsenGenereren()
         {
             Random random = new Random();
+            //StreamWriter writer = new StreamWriter("CoordinatesRocks.txt");
 
             for (int i = 0; i < 10; i++)
             {
                 arrayrotsen[random.Next(1, 39),random.Next(1, 19)] = true;
             }
            
-
         }
     }
 }
