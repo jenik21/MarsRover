@@ -24,8 +24,8 @@ namespace MarsRover
             rover.ToonInSight();
             mars.toonMars();
 
-            //grens.test(rover);
-            station.toonBasis();
+        //grens.test(rover);
+        station.toonBasis();
             water.Plaats();
 
 
@@ -56,7 +56,7 @@ namespace MarsRover
                             water.WaterNietZien();
                             break;
                         case ConsoleKey.Enter:
-                            rover.boor();
+                            rover.Boor(ref mars.aantalkeerboren);
                             break;
                     }
                     Console.Clear();
@@ -69,7 +69,7 @@ namespace MarsRover
                     station.toonBasis();
 
                 }
-            }
+}
         }
     }
    
@@ -154,13 +154,20 @@ namespace MarsRover
         char waterplas = '〰';
         
         ConsoleColor water = ConsoleColor.Blue;
-        public void boor()
+        public void Boor(ref int akb)
         {
-            //for (int i =0; i < .length; i++)
-            //{
+            if (akb==0)
+            {
+                
+            }
 
-            //}
-        }
+            else
+            {
+                akb--;
+            }
+
+            
+    }
         public void toonwater(bool succes)
         {
             if (succes == true)

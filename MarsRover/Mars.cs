@@ -13,6 +13,8 @@ namespace MarsRover
       public int grootteX = 40;
         public int grootteY = 20;
         bool[,] arrayrotsen = new bool[40,20];
+        public int aantalkeerboren = 3;
+
 
         public Mars()
         {
@@ -57,7 +59,7 @@ namespace MarsRover
                 Console.SetCursorPosition(i, grootteY);
                 Console.Write("═");
             }
-
+            Console.WriteLine("         #Boren: " + aantalkeerboren);
 
         }
 
